@@ -1,0 +1,40 @@
+[Unit]
+Description=ADEQUATE restricted TLS ingress
+After=network-online.target adequate-inference-gateway.service
+Wants=network-online.target
+StartLimitIntervalSec=120
+StartLimitBurst=5
+
+[Service]
+Type=notify
+User=caddy
+Group=caddy
+EnvironmentFile=/etc/adequate-inference/ingress.env
+Environment=XDG_DATA_HOME=/var/lib/adequate-inference-caddy
+Environment=XDG_CONFIG_HOME=/var/lib/adequate-inference-caddy
+ExecStart=/usr/bin/caddy run --config /etc/adequate-inference/Caddyfile --adapter caddyfile
+Restart=on-failure
+RestartSec=5
+TimeoutStopSec=35
+StateDirectory=adequate-inference-caddy
+UMask=0077
+NoNewPrivileges=true
+CapabilityBoundingSet=CAP_NET_BIND_SERVICE
+AmbientCapabilities=CAP_NET_BIND_SERVICE
+ProtectSystem=strict
+ReadWritePaths=/var/lib/adequate-inference-caddy
+ProtectHome=true
+PrivateTmp=true
+PrivateDevices=true
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectControlGroups=true
+ProtectKernelLogs=true
+RestrictSUIDSGID=true
+RestrictNamespaces=true
+LockPersonality=true
+RestrictAddressFamilies=AF_UNIX AF_INET AF_INET6
+SystemCallArchitectures=native
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,17 @@
+
+> adequate-design-atelier@0.1.0 test:integration
+> tsx --test tests/integration/*.test.ts
+
+✔ real Auth verification, persisted member CRUD, isolation, consent, revocation and deletion (4893.579898ms)
+✔ founder versioned draft publication, restricted media, bookmarks and playback resume (6111.954108ms)
+✔ actual quarantined upload, rights approval and playable public synthetic audio (2862.624039ms)
+✔ direct deletion RPC queues private blobs and executable worker removes them (609.047663ms)
+✔ native anonymous login without browser Origin issues a usable session and revokes it (1261.722681ms)
+ℹ tests 5
+ℹ suites 0
+ℹ pass 5
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 16227.968251

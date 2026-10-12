@@ -1,0 +1,87 @@
+{
+  "license": "SIL Open Font License 1.1",
+  "repositories": {
+    "space": {
+      "repository": "floriankarsten/space-grotesk",
+      "commit": "03507d024a01282884232081fc6011c09ff4e849"
+    },
+    "plex": {
+      "repository": "google/fonts",
+      "commit": "bd8f81ddb5c74d5c8897b36ad88b440266245103"
+    }
+  },
+  "files": [
+    {
+      "file": "SpaceGrotesk-Regular.ttf",
+      "source": "https://raw.githubusercontent.com/floriankarsten/space-grotesk/03507d024a01282884232081fc6011c09ff4e849/fonts/ttf/static/SpaceGrotesk-Regular.ttf",
+      "sha256": "5ede28c4425f3fe4830c8f4754b39e9a87a93d0c3baa5e0a9924532aaa8a98bd",
+      "bytes": 114428,
+      "weight": 400,
+      "family": "Space Grotesk",
+      "subfamily": "Regular",
+      "postScriptName": "SpaceGrotesk-Regular",
+      "version": "Version 2.000; ttfautohint (v1.8.3)",
+      "glyphs": 1001
+    },
+    {
+      "file": "SpaceGrotesk-Medium.ttf",
+      "source": "https://raw.githubusercontent.com/floriankarsten/space-grotesk/03507d024a01282884232081fc6011c09ff4e849/fonts/ttf/static/SpaceGrotesk-Medium.ttf",
+      "sha256": "3183b7eb0b4241476360e2cd8e527868616cc16d3ce332c4376505989b772b44",
+      "bytes": 116664,
+      "weight": 500,
+      "family": "Space Grotesk Medium",
+      "subfamily": "Regular",
+      "postScriptName": "SpaceGrotesk-Medium",
+      "version": "Version 2.000; ttfautohint (v1.8.3)",
+      "glyphs": 1001
+    },
+    {
+      "file": "SpaceGrotesk-Bold.ttf",
+      "source": "https://raw.githubusercontent.com/floriankarsten/space-grotesk/03507d024a01282884232081fc6011c09ff4e849/fonts/ttf/static/SpaceGrotesk-Bold.ttf",
+      "sha256": "7209bbb75fc0f5c546a5f5773b0db74ffc6abf04c2148c1105cace5765a96bdb",
+      "bytes": 116056,
+      "weight": 700,
+      "family": "Space Grotesk",
+      "subfamily": "Bold",
+      "postScriptName": "SpaceGrotesk-Bold",
+      "version": "Version 2.000; ttfautohint (v1.8.3)",
+      "glyphs": 1001
+    },
+    {
+      "file": "IBMPlexMono-Regular.ttf",
+      "source": "https://raw.githubusercontent.com/google/fonts/bd8f81ddb5c74d5c8897b36ad88b440266245103/ofl/ibmplexmono/IBMPlexMono-Regular.ttf",
+      "sha256": "6a3412f058c7d8dfd9170c41e85ade48e5156ecb89356110ca57a0a27734af46",
+      "bytes": 135580,
+      "weight": 400,
+      "family": "IBM Plex Mono",
+      "subfamily": "Regular",
+      "postScriptName": "IBMPlexMono-Regular",
+      "version": "Version 2.3",
+      "glyphs": 1033
+    },
+    {
+      "file": "IBMPlexMono-Medium.ttf",
+      "source": "https://raw.githubusercontent.com/google/fonts/bd8f81ddb5c74d5c8897b36ad88b440266245103/ofl/ibmplexmono/IBMPlexMono-Medium.ttf",
+      "sha256": "a9b4c49bb299e05b5f6c481e7fb5e78943d2793249a0c8874ab574a2d1ea6755",
+      "bytes": 136704,
+      "weight": 500,
+      "family": "IBM Plex Mono Medium",
+      "subfamily": "Regular",
+      "postScriptName": "IBMPlexMono-Medium",
+      "version": "Version 2.3",
+      "glyphs": 1033
+    },
+    {
+      "file": "SpaceGrotesk-OFL.txt",
+      "source": "https://raw.githubusercontent.com/floriankarsten/space-grotesk/03507d024a01282884232081fc6011c09ff4e849/OFL.txt",
+      "sha256": "564ce565c371c5e5bbf286006565a7c9aa55a9f56e7ca58d56e05d649dd61a72",
+      "bytes": 4495
+    },
+    {
+      "file": "IBMPlexMono-OFL.txt",
+      "source": "https://raw.githubusercontent.com/google/fonts/bd8f81ddb5c74d5c8897b36ad88b440266245103/ofl/ibmplexmono/OFL.txt",
+      "sha256": "7e6b2818edbd8f6a01ae80641cc8f16a51080d08fb4e532be3a0b6f74adb07da",
+      "bytes": 4456
+    }
+  ]
+}

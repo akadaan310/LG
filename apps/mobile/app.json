@@ -1,0 +1,22 @@
+{
+  "expo": {
+    "name": "ADEQUATE",
+    "slug": "adequate-member",
+    "version": "0.1.0",
+    "scheme": "adequate",
+    "orientation": "default",
+    "userInterfaceStyle": "automatic",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "org.adequate.member",
+      "config": { "usesNonExemptEncryption": false }
+    },
+    "android": { "package": "org.adequate.member" },
+    "web": { "bundler": "metro" },
+    "plugins": [
+      "expo-font",
+      "expo-secure-store",
+      ["expo-audio", { "microphonePermission": false }]
+    ]
+  }
+}

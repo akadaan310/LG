@@ -1,0 +1,41 @@
+[Unit]
+Description=ADEQUATE CPU-only resident llama.cpp runtime
+After=network-online.target
+StartLimitIntervalSec=120
+StartLimitBurst=5
+
+[Service]
+Type=simple
+User=adequate-inference
+Group=adequate-inference
+EnvironmentFile=/etc/adequate-inference/runtime.env
+ExecStart=/opt/adequate-inference/infrastructure/oracle/deploy/scripts/start-llama.sh
+ExecStartPost=/opt/adequate-inference/infrastructure/oracle/deploy/scripts/warm.sh llama.cpp
+Restart=on-failure
+RestartSec=5
+TimeoutStartSec=240
+TimeoutStopSec=35
+# Raw runtime output is suppressed because upstream runtimes may emit prompt text.
+StandardOutput=null
+StandardError=null
+UMask=0077
+NoNewPrivileges=true
+CapabilityBoundingSet=
+ProtectSystem=strict
+ProtectHome=true
+PrivateTmp=true
+PrivateDevices=true
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectControlGroups=true
+ProtectKernelLogs=true
+RestrictSUIDSGID=true
+RestrictNamespaces=true
+LockPersonality=true
+RestrictAddressFamilies=AF_UNIX AF_INET AF_INET6
+SystemCallArchitectures=native
+IPAddressDeny=any
+IPAddressAllow=localhost
+
+[Install]
+WantedBy=multi-user.target

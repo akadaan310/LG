@@ -1,0 +1,13 @@
+# Architecture and authorization boundaries
+
+`apps/atelier` and `apps/native-preview` remain design references. `apps/platform` is a separate dynamic Next application; `apps/mobile` is the native product. `packages/domain` contains platform-neutral validation and exact approved hybrid tokens. No product imports prototype content.
+
+Web requests use Supabase SSR cookie sessions, refreshed by middleware; native requests use verified bearer access tokens. The API validates identity using Auth, reads database roles, verifies active account/session, validates inputs and applies rate limits. It queries with the requester's credentials so RLS remains authoritative. Cookie writes require same-origin checks. Private reflection content is absent from trace logs. Server failures return a trace ID and an actionable generic error.
+
+Public discovery selects only published, explicitly founder-approved, rights-verified content. Member entitlements further restrict member content. Studio roles can edit drafts; founder approval, scheduled publication, publishing and rollback go through transaction-protected database workflows. Editing invalidates approval. Versions and audits remain immutable. Media uploads are quarantined pending scanning and rights verification; playback uses short-lived signed access after database authorization. There is no arbitrary remote media fetch.
+
+AI is optional. The application establishes role, consent and authorized retrieval sources before handing a typed task to the router. The router bounds inputs, queues, deadlines and concurrency; validates model output and references; labels results unapproved; and returns a manual fallback on failure. Deterministic discovery avoids inference. Model responses cannot publish, grant access or execute tools. The default adapter is an explicitly labeled local mock. Oracle deployment and external fallback are blocked pending access/authorization and consent.
+
+The product contains no checkout or billing provider credentials. Entitlements are persisted separately from self-editable profile data. A future billing adapter must verify provider webhook signatures, deduplicate event IDs transactionally, and pass reviewed event data to entitlement updates; no client grants its own tier. This integration is currently blocked, not a working paid billing service.
+
+Development, staging and production must use distinct Supabase refs and secrets. No remote ADEQUATE project has been confirmed in this session. Do not point test fixtures or local migrations at the unrelated connected project. Missing exports, approved founder material and native-device evidence prevent an owner-acceptance or launch claim.

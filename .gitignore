@@ -1,5 +1,6 @@
 node_modules/
 .next/
+.next-dev/
 out/
 dist/
 .expo/
@@ -8,3 +9,7 @@ web-build/
 .DS_Store
 npm-debug.log*
 .env*
+!.env.example
+!**/*.env.example
+test-results/
+playwright-report/

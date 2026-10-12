@@ -1,0 +1,3 @@
+-- Intentionally empty. Production receives no synthetic people, content, prices,
+-- roles, approval claims, entitlements or recordings. Local test fixtures live
+-- in tests/database/security.sql and roll back at the end of every test run.

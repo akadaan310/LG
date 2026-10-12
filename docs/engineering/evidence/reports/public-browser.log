@@ -1,0 +1,18 @@
+
+> adequate-design-atelier@0.1.0 test:e2e
+> playwright test
+
+
+Running 7 tests using 1 worker
+
+(node:41560) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓  1 tests/e2e/public.spec.ts:5:7 › approved public structures are accessible at 360px (7.2s)
+  ✓  2 tests/e2e/public.spec.ts:5:7 › approved public structures are accessible at 390px (4.1s)
+  ✓  3 tests/e2e/public.spec.ts:5:7 › approved public structures are accessible at 820px (4.3s)
+  ✓  4 tests/e2e/public.spec.ts:5:7 › approved public structures are accessible at 1440px (4.3s)
+  ✓  5 tests/e2e/public.spec.ts:22:5 › principle rings support keyboard selection and missing audio stays unavailable (1.7s)
+  ✓  6 tests/e2e/public.spec.ts:29:5 › exact hybrid palette and licensed typography are applied (651ms)
+  ✓  7 tests/e2e/public.spec.ts:35:5 › cookie mutation rejects cross-site request and signup gate is explicit (63ms)
+
+  7 passed (26.1s)

@@ -1,0 +1,46 @@
+[Unit]
+Description=ADEQUATE private typed inference gateway
+After=network-online.target
+Wants=network-online.target
+StartLimitIntervalSec=120
+StartLimitBurst=5
+
+[Service]
+Type=simple
+User=adequate-inference
+Group=adequate-inference
+WorkingDirectory=/opt/adequate-inference
+Environment=NODE_ENV=production
+EnvironmentFile=/etc/adequate-inference/runtime.env
+EnvironmentFile=/etc/adequate-inference/gateway.env
+ExecStartPre=/opt/adequate-inference/infrastructure/oracle/deploy/scripts/preflight.sh
+ExecStart=/usr/bin/node /opt/adequate-inference/infrastructure/oracle/gateway.mjs
+ExecStartPost=/opt/adequate-inference/infrastructure/oracle/deploy/scripts/wait-ready.sh
+Restart=on-failure
+RestartSec=5
+KillSignal=SIGTERM
+# Gateway drains requests up to DEADLINE_MS; this must remain greater than that deadline.
+TimeoutStopSec=35
+TimeoutStartSec=120
+UMask=0077
+NoNewPrivileges=true
+CapabilityBoundingSet=
+ProtectSystem=strict
+ProtectHome=true
+PrivateTmp=true
+PrivateDevices=true
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectControlGroups=true
+ProtectKernelLogs=true
+RestrictSUIDSGID=true
+RestrictNamespaces=true
+LockPersonality=true
+RestrictAddressFamilies=AF_UNIX AF_INET AF_INET6
+SystemCallArchitectures=native
+# Gateway can reach only local runtimes; host support for these rules must be checked.
+IPAddressDeny=any
+IPAddressAllow=localhost
+
+[Install]
+WantedBy=multi-user.target
