@@ -2,10 +2,11 @@
   "name": "adequate-design-atelier",
   "private": true,
   "version": "0.1.0",
-  "description": "ADEQUATE Design Atelier — design-only review prototype (no backend, no production logic).",
+  "description": "ADEQUATE Design Atelier \u2014 design-only review prototype (no backend, no production logic).",
   "workspaces": [
     "packages/*",
-    "apps/atelier"
+    "apps/atelier",
+    "apps/platform"
   ],
   "scripts": {
     "dev": "npm run dev -w @adequate/atelier",
@@ -18,9 +19,34 @@
     "native:install": "npm install --prefix apps/native-preview --no-workspaces",
     "native:start": "npm run start --prefix apps/native-preview",
     "native:typecheck": "npm run typecheck --prefix apps/native-preview",
-    "native:export": "npm run export:atelier --prefix apps/native-preview"
+    "native:export": "npm run export:atelier --prefix apps/native-preview",
+    "product:dev": "npm run dev -w @adequate/platform",
+    "product:build": "npm run build -w @adequate/platform",
+    "product:start": "npm run start -w @adequate/platform",
+    "product:typecheck": "npm run typecheck -w @adequate/domain -w @adequate/ai -w @adequate/platform",
+    "product:lint": "npm run lint -w @adequate/platform",
+    "test": "tsx --test tests/domain/*.test.ts tests/ai/*.test.ts tests/api/*.test.ts tests/ai/*.test.mjs tests/mobile/*.test.ts tests/operations/*.test.mjs",
+    "test:e2e": "playwright test",
+    "test:db": "bash tests/database/run.sh",
+    "verify:source": "node scripts/verify-source.mjs",
+    "test:gateway": "node --test tests/ai/*.test.mjs",
+    "test:integration": "tsx --test tests/integration/*.test.ts",
+    "test:web-flows": "node --test tests/web/operational.test.mjs",
+    "test:db-concurrency": "node tests/database/concurrency.mjs"
   },
   "engines": {
     "node": ">=20"
+  },
+  "devDependencies": {
+    "@playwright/test": "1.64.0",
+    "postcss": "8.5.29",
+    "supabase": "2.120.0",
+    "tsx": "4.23.15"
+  },
+  "overrides": {
+    "postcss": "8.5.29",
+    "next": {
+      "postcss": "8.5.29"
+    }
   }
 }
