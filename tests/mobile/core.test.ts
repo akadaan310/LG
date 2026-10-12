@@ -313,3 +313,8 @@ test("mobile rejects both current and legacy server keys", () => {
     validatePublicKey("sb_publishable_a_public_key_for_testing"),
   );
 });
+
+test('preference mutation projects only writable fields from stored account metadata',async()=>{
+ const core=await import('../../apps/mobile/src/core');
+ assert.deepEqual(core.preferenceInput({theme:'light',ai_enabled:false,user_id:A,updated_at:'2026-10-12T00:00:00Z'}),{theme:'light',ai_enabled:false});
+});

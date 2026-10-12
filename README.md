@@ -1,4 +1,22 @@
-# ADEQUATE — Design Atelier
+# ADEQUATE — Product and Design Atelier
+
+
+Operational engineering now lives alongside the preserved design reference:
+
+- `apps/platform`: dynamic Next.js web, private member tools, Founder Studio and typed APIs.
+- `apps/mobile`: separate Expo member app with native fonts, secure sessions and private offline drafts.
+- `packages/domain` / `packages/ai`: shared contracts/tokens and optional validated inference.
+- `supabase`: migrations, RLS/storage policies, immutable editorial history and security tests.
+
+```bash
+npm ci
+cp .env.example apps/platform/.env.local # supply only the confirmed project configuration
+npm run product:dev                     # http://localhost:3100
+npm run product:build
+npm test
+```
+
+Start with [ACCEPTANCE_REPORT](docs/engineering/ACCEPTANCE_REPORT.md), [API contracts](docs/engineering/API_CONTRACTS.md), [database setup](docs/engineering/DATABASE.md), [native instructions](docs/engineering/MOBILE.md), and the [production runbook](docs/engineering/PRODUCTION_RUNBOOK.md). Signup, billing, community, unselected designs, real founder material, Oracle deployment and public launch remain gated. No remote Supabase project or Oracle node was changed. The original Atelier documentation below describes the design reference, whose mock content is never imported by the product.
 
 **Always Remember, Everyone Is Adequate.**
 

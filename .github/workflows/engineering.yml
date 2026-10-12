@@ -1,0 +1,74 @@
+name: Engineering verification
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  web-contracts:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: npm run check
+      - run: npm run product:typecheck
+      - run: npm run product:lint
+      - run: npm test
+      - run: npm run verify:source
+      - run: npm audit --omit=dev --audit-level=high
+      - run: npm run product:build
+      - run: npx playwright install --with-deps chromium
+      - run: CHROMIUM_PATH=$(find "$HOME/.cache/ms-playwright" -path '*/chrome-linux64/chrome' -type f | head -1) npm run test:e2e
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: web-evidence
+          path: test-results/
+  database:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+          cache: npm
+      - run: npm ci
+      - run: ADEQUATE_DISPOSABLE_FIXTURES=true node scripts/enable-local-fixtures.mjs
+      - run: npx supabase start -x realtime,imgproxy,postgres-meta,studio,edge-runtime,logflare,vector,supavisor
+      - run: npm run test:db
+      - run: ADEQUATE_DB_CONTAINER=supabase_db_LG node tests/database/concurrency.mjs
+      - run: npx supabase db reset --local
+      - run: npm run test:db
+      - run: npx supabase status -o env > /tmp/adequate-local.env
+      - run: chmod 600 /tmp/adequate-local.env && node scripts/local-product-env.mjs
+      - run: npm run product:build
+      - run: |
+          npm run product:start > /tmp/adequate-product.log 2>&1 &
+          for attempt in $(seq 1 60); do
+            if curl -fsS http://127.0.0.1:3100/api/health > /dev/null; then break; fi
+            sleep 1
+          done
+          ADEQUATE_DB_CONTAINER=supabase_db_LG npm run test:integration
+      - run: npx playwright install --with-deps chromium
+      - run: CHROMIUM_PATH=$(find "$HOME/.cache/ms-playwright" -path '*/chrome-linux64/chrome' -type f | head -1) ADEQUATE_DB_CONTAINER=supabase_db_LG ADEQUATE_TEST_URL=http://127.0.0.1:3100 npm run test:web-flows
+  native:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      - run: npm ci
+      - run: npm ci --prefix apps/mobile --no-workspaces
+      - run: npm run typecheck --prefix apps/mobile
+      - run: npm run export:web --prefix apps/mobile
+      - run: npm audit --prefix apps/mobile --omit=dev --audit-level=high
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: native-web-export
+          path: apps/mobile/dist/

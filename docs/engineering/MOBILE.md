@@ -50,13 +50,13 @@ Five original static TTFs load through `expo-font`: Space Grotesk 400/500/700 an
 
 Commands exercised during implementation:
 
-- Root `npm test`: 68/68 domain, API, inference, mobile and operations tests passed in the fresh implementation run.
+- Root `npm test`: 71/71 domain, API, inference, mobile and operations tests passed in the fresh implementation run.
 - `tsx --test tests/mobile/*.test.ts`: account ownership, forged owners, logout races, reconnect preservation, Unicode secure chunks, bearer envelopes, callback destinations, deadline cancellation, HTTPS/URL credential/public-key rejection.
 - `npm run typecheck --prefix apps/mobile`: passed.
 - `npm run export:web --prefix apps/mobile` and Expo exports for iOS/Android/web; five TTF assets included and Hermes bundles generated.
 - Chromium component runtime at 390px: unconfigured setup state, five fonts loaded, no page errors or horizontal overflow.
-- Real member browser smoke first reached the configured auth screen without runtime errors, but login was blocked by the local server's missing native callback configuration. This is a recorded configuration gate, not a passing authenticated-flow claim.
-- Optional real local member runtime: `node tests/mobile/runtime.mjs`; requires the local API on port 3100, Supabase on 54321 and ignored `/tmp/adequate-local.env`. It creates and deletes one isolated test member, uses synthetic acceptance text only, and writes sanitized results/screenshots under `/tmp/adequate-design-audit/`. It never targets a remote project.
+- Real local member browser smoke **PASS** against the fresh API on port 3200: native bearer login, approved Today structure, reflection create/edit/delete, disconnected draft restoration across screen remount, manual reconnect save, theme/consent changes, logout draft cleanup and sign-in persistence. Zero browser runtime errors. The explicit local proxy covers both API and Auth, preserving native semantics without enabling production CORS. The isolated fixture account is deleted afterward.
+- Optional real local member runtime: `ADEQUATE_TEST_URL=http://127.0.0.1:3200 node tests/mobile/runtime.mjs`; requires the local API on the selected loopback port, Supabase on 54321 and ignored `/tmp/adequate-local.env`. It creates and deletes one isolated test member, uses synthetic acceptance text only, and writes sanitized results/screenshots under `/tmp/adequate-design-audit/`. It never targets a remote project.
 
 Physical iPhone/Android devices, native simulators, OS SecureStore persistence, registered email links, VoiceOver/TalkBack, dynamic type and real-device audio routing are **BLOCKED** until device access is provided. Native exports are build evidence, not physical-device acceptance. Actual owner-approved LG material and cleared recordings remain unavailable; no substitutes are shipped.
 

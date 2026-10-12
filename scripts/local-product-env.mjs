@@ -1,0 +1,10 @@
+import {readFileSync,writeFileSync,chmodSync} from 'node:fs';
+import {randomBytes} from 'node:crypto';
+import {parseLocalEnvironment} from './read-local-env.mjs';
+const source=process.env.ADEQUATE_LOCAL_CREDENTIALS || '/tmp/adequate-local.env';
+const values=parseLocalEnvironment(readFileSync(source,'utf8'));
+if(!values.ANON_KEY||!values.SERVICE_ROLE_KEY)throw new Error('Local-only generated keys are required.');
+const target='apps/platform/.env.local';
+const config={NEXT_PUBLIC_SUPABASE_URL:'http://127.0.0.1:54321',NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY:values.ANON_KEY,SUPABASE_SERVICE_ROLE_KEY:values.SERVICE_ROLE_KEY,APP_ORIGIN:'http://127.0.0.1:3100',AUTH_RATE_LIMIT_SALT:randomBytes(32).toString('hex'),AGE_POLICY_APPROVED:'true',AI_MODE:'mock',PATHWAYS_REVIEW_APPROVED:'true'};
+writeFileSync(target,Object.entries(config).map(([key,value])=>`${key}=${value}`).join('\n')+'\n',{mode:0o600});chmodSync(target,0o600);
+console.log('Ignored local product environment created. Approval flags apply only to disposable test fixtures.');

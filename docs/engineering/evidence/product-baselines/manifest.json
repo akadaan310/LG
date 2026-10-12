@@ -1,0 +1,326 @@
+{
+  "capturedAt": "2026-10-12T11:21:40.826Z",
+  "notice": "Local generated baselines. Not owner visual approval and not LG content. Missing approved exports still block design acceptance.",
+  "cases": [
+    {
+      "file": "public-home-v2-dark-360.png",
+      "route": "home",
+      "variant": "v2",
+      "theme": "dark",
+      "width": 360,
+      "status": "UNREVIEWED baseline; export provenance pending"
+    },
+    {
+      "file": "public-story-v2-dark-360.png",
+      "route": "story",
+      "variant": "v2",
+      "theme": "dark",
+      "width": 360,
+      "status": "UNREVIEWED baseline; export provenance pending"
+    },
+    {
+      "file": "public-principle-v1-dark-360.png",
+      "route": "principle",
+      "variant": "v1",
+      "theme": "dark",
+      "width": 360,
+      "status": "UNREVIEWED baseline; export provenance pending"
+    },
+    {
+      "file": "public-listen-v1-dark-360.png",
+      "route": "listen",
+      "variant": "v1",
+      "theme": "dark",
+      "width": 360,
+      "status": "UNREVIEWED baseline; export provenance pending"
+    },
+    {
+      "file": "public-membership-v1-dark-360.png",
+      "route": "membership",
+      "variant": "v1",
+      "theme": "dark",
+      "width": 360,
+      "status": "UNREVIEWED baseline; export provenance pending"
+    },
+    {
+      "file": "public-home-v2-dark-390.png",
+      "route": "home",
+      "variant": "v2",
+      "theme": "dark",
+      "width": 390,
+      "status": "UNREVIEWED baseline; export provenance pending"
+    },
+    {
+      "file": "public-story-v2-dark-390.png",
+      "route": "story",
+      "variant": "v2",
+      "theme": "dark",
+      "width": 390,
+      "status": "UNREVIEWED baseline; export provenance pending"
+    },
+    {
+      "file": "public-principle-v1-dark-390.png",
+      "route": "principle",
+      "variant": "v1",
+      "theme": "dark",
+      "width": 390,
+      "status": "UNREVIEWED baseline; export provenance pending"
+    },
+    {
+      "file": "public-listen-v1-dark-390.png",
+      "route": "listen",
+      "variant": "v1",
+      "theme": "dark",
+      "width": 390,
+      "status": "UNREVIEWED baseline; export provenance pending"
+    },
+    {
+      "file": "public-membership-v1-dark-390.png",
+      "route": "membership",
+      "variant": "v1",
+      "theme": "dark",
+      "width": 390,
+      "status": "UNREVIEWED baseline; export provenance pending"
+    },
+    {
+      "file": "public-home-v2-dark-820.png",
+      "route": "home",
+      "variant": "v2",
+      "theme": "dark",
+      "width": 820,
+      "status": "UNREVIEWED baseline; export provenance pending"
+    },
+    {
+      "file": "public-story-v2-dark-820.png",
+      "route": "story",
+      "variant": "v2",
+      "theme": "dark",
+      "width": 820,
+      "status": "UNREVIEWED baseline; export provenance pending"
+    },
+    {
+      "file": "public-principle-v1-dark-820.png",
+      "route": "principle",
+      "variant": "v1",
+      "theme": "dark",
+      "width": 820,
+      "status": "UNREVIEWED baseline; export provenance pending"
+    },
+    {
+      "file": "public-listen-v1-dark-820.png",
+      "route": "listen",
+      "variant": "v1",
+      "theme": "dark",
+      "width": 820,
+      "status": "UNREVIEWED baseline; export provenance pending"
+    },
+    {
+      "file": "public-membership-v1-dark-820.png",
+      "route": "membership",
+      "variant": "v1",
+      "theme": "dark",
+      "width": 820,
+      "status": "UNREVIEWED baseline; export provenance pending"
+    },
+    {
+      "file": "public-home-v2-dark-1440.png",
+      "route": "home",
+      "variant": "v2",
+      "theme": "dark",
+      "width": 1440,
+      "status": "UNREVIEWED baseline; export provenance pending"
+    },
+    {
+      "file": "public-story-v2-dark-1440.png",
+      "route": "story",
+      "variant": "v2",
+      "theme": "dark",
+      "width": 1440,
+      "status": "UNREVIEWED baseline; export provenance pending"
+    },
+    {
+      "file": "public-principle-v1-dark-1440.png",
+      "route": "principle",
+      "variant": "v1",
+      "theme": "dark",
+      "width": 1440,
+      "status": "UNREVIEWED baseline; export provenance pending"
+    },
+    {
+      "file": "public-listen-v1-dark-1440.png",
+      "route": "listen",
+      "variant": "v1",
+      "theme": "dark",
+      "width": 1440,
+      "status": "UNREVIEWED baseline; export provenance pending"
+    },
+    {
+      "file": "public-membership-v1-dark-1440.png",
+      "route": "membership",
+      "variant": "v1",
+      "theme": "dark",
+      "width": 1440,
+      "status": "UNREVIEWED baseline; export provenance pending"
+    },
+    {
+      "file": "public-home-v2-light-360.png",
+      "route": "home",
+      "variant": "v2",
+      "theme": "light",
+      "width": 360,
+      "status": "UNREVIEWED baseline; export provenance pending"
+    },
+    {
+      "file": "public-story-v2-light-360.png",
+      "route": "story",
+      "variant": "v2",
+      "theme": "light",
+      "width": 360,
+      "status": "UNREVIEWED baseline; export provenance pending"
+    },
+    {
+      "file": "public-principle-v1-light-360.png",
+      "route": "principle",
+      "variant": "v1",
+      "theme": "light",
+      "width": 360,
+      "status": "UNREVIEWED baseline; export provenance pending"
+    },
+    {
+      "file": "public-listen-v1-light-360.png",
+      "route": "listen",
+      "variant": "v1",
+      "theme": "light",
+      "width": 360,
+      "status": "UNREVIEWED baseline; export provenance pending"
+    },
+    {
+      "file": "public-membership-v1-light-360.png",
+      "route": "membership",
+      "variant": "v1",
+      "theme": "light",
+      "width": 360,
+      "status": "UNREVIEWED baseline; export provenance pending"
+    },
+    {
+      "file": "public-home-v2-light-390.png",
+      "route": "home",
+      "variant": "v2",
+      "theme": "light",
+      "width": 390,
+      "status": "UNREVIEWED baseline; export provenance pending"
+    },
+    {
+      "file": "public-story-v2-light-390.png",
+      "route": "story",
+      "variant": "v2",
+      "theme": "light",
+      "width": 390,
+      "status": "UNREVIEWED baseline; export provenance pending"
+    },
+    {
+      "file": "public-principle-v1-light-390.png",
+      "route": "principle",
+      "variant": "v1",
+      "theme": "light",
+      "width": 390,
+      "status": "UNREVIEWED baseline; export provenance pending"
+    },
+    {
+      "file": "public-listen-v1-light-390.png",
+      "route": "listen",
+      "variant": "v1",
+      "theme": "light",
+      "width": 390,
+      "status": "UNREVIEWED baseline; export provenance pending"
+    },
+    {
+      "file": "public-membership-v1-light-390.png",
+      "route": "membership",
+      "variant": "v1",
+      "theme": "light",
+      "width": 390,
+      "status": "UNREVIEWED baseline; export provenance pending"
+    },
+    {
+      "file": "public-home-v2-light-820.png",
+      "route": "home",
+      "variant": "v2",
+      "theme": "light",
+      "width": 820,
+      "status": "UNREVIEWED baseline; export provenance pending"
+    },
+    {
+      "file": "public-story-v2-light-820.png",
+      "route": "story",
+      "variant": "v2",
+      "theme": "light",
+      "width": 820,
+      "status": "UNREVIEWED baseline; export provenance pending"
+    },
+    {
+      "file": "public-principle-v1-light-820.png",
+      "route": "principle",
+      "variant": "v1",
+      "theme": "light",
+      "width": 820,
+      "status": "UNREVIEWED baseline; export provenance pending"
+    },
+    {
+      "file": "public-listen-v1-light-820.png",
+      "route": "listen",
+      "variant": "v1",
+      "theme": "light",
+      "width": 820,
+      "status": "UNREVIEWED baseline; export provenance pending"
+    },
+    {
+      "file": "public-membership-v1-light-820.png",
+      "route": "membership",
+      "variant": "v1",
+      "theme": "light",
+      "width": 820,
+      "status": "UNREVIEWED baseline; export provenance pending"
+    },
+    {
+      "file": "public-home-v2-light-1440.png",
+      "route": "home",
+      "variant": "v2",
+      "theme": "light",
+      "width": 1440,
+      "status": "UNREVIEWED baseline; export provenance pending"
+    },
+    {
+      "file": "public-story-v2-light-1440.png",
+      "route": "story",
+      "variant": "v2",
+      "theme": "light",
+      "width": 1440,
+      "status": "UNREVIEWED baseline; export provenance pending"
+    },
+    {
+      "file": "public-principle-v1-light-1440.png",
+      "route": "principle",
+      "variant": "v1",
+      "theme": "light",
+      "width": 1440,
+      "status": "UNREVIEWED baseline; export provenance pending"
+    },
+    {
+      "file": "public-listen-v1-light-1440.png",
+      "route": "listen",
+      "variant": "v1",
+      "theme": "light",
+      "width": 1440,
+      "status": "UNREVIEWED baseline; export provenance pending"
+    },
+    {
+      "file": "public-membership-v1-light-1440.png",
+      "route": "membership",
+      "variant": "v1",
+      "theme": "light",
+      "width": 1440,
+      "status": "UNREVIEWED baseline; export provenance pending"
+    }
+  ]
+}

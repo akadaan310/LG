@@ -1,0 +1,12 @@
+{
+  "environment": "local-only",
+  "device": "Chromium react-native-web at 390px; not a physical native device",
+  "checks": [
+    "Native bearer login, approved Today home-base and disabled community",
+    "Reflection created and edited through real local API",
+    "Disconnected save retains account draft across screen remount and reconnect manually submits",
+    "Reflection deletion persists",
+    "Preferences/consent requests, logout clears private local draft, sign-in restores saved server reflection"
+  ],
+  "pageErrors": []
+}

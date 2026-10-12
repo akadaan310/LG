@@ -1,0 +1,51 @@
+
+> adequate-design-atelier@0.1.0 product:build
+> npm run build -w @adequate/platform
+
+
+> @adequate/platform@0.1.0 build
+> next build
+
+▲ Next.js 16.4.0 (Turbopack)
+- Environments: .env.local
+✓ Running next.config.mjs took 20ms
+- Experiments (use with caution):
+  · proxyClientMaxBodySize: "30mb"
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 1871ms
+  Running TypeScript ...
+  Finished TypeScript in 3.3s ...
+  Collecting page data using 4 workers ...
+  Generating static pages using 4 workers (0/16) ...
+  Generating static pages using 4 workers (4/16) 
+  Generating static pages using 4 workers (8/16) 
+  Generating static pages using 4 workers (12/16) 
+✓ Generating static pages using 4 workers (16/16) in 439ms
+  Finalizing page optimization ...
+
+Route (app)
+┌ ○ /
+├ ○ /_not-found
+├ ƒ /api/[...path]
+├ ƒ /auth
+├ ƒ /content/[slug]
+├ ○ /library
+├ ○ /listen
+├ ○ /membership
+├ ○ /pathways
+├ ○ /preferences
+├ ○ /principle
+├ ○ /privacy
+├ ○ /reflections
+├ ○ /saved
+├ ○ /story
+├ ○ /studio
+└ ○ /today
+
+
+ƒ Proxy (Middleware)
+
+○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand
+

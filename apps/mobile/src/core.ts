@@ -1,4 +1,8 @@
 /** Platform-neutral native continuity logic. No member data is logged. */
+import { preferencesSchema } from "@adequate/domain";
+export function preferenceInput(value: {theme:unknown;ai_enabled:unknown;[field:string]:unknown}) {
+  return preferencesSchema.parse({theme:value.theme,ai_enabled:value.ai_enabled});
+}
 export interface StorageAdapter {
   getItem(key: string): Promise<string | null>;
   setItem(key: string, value: string): Promise<void>;

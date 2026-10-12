@@ -34,7 +34,7 @@ import {
   reflectionSchema,
   type Reflection,
 } from "@adequate/domain";
-import { parseAuthLink, MobileApiError } from "./src/core";
+import { parseAuthLink, MobileApiError, preferenceInput } from "./src/core";
 import {
   api,
   authRedirect,
@@ -76,9 +76,7 @@ const tabs: { id: Tab; label: string }[] = [
   { id: "preferences", label: "Preferences" },
 ];
 const errorMessage = (value: unknown) =>
-  value instanceof Error
-    ? value.message
-    : "The request could not be completed. Please try again.";
+  value instanceof Error && value.name === "ZodError" ? "Check the fields and try again." : value instanceof Error ? value.message : "The request could not be completed. Please try again.";
 const fonts = {
   "SpaceGrotesk-Regular": require("./assets/fonts/SpaceGrotesk-Regular.ttf"),
   "SpaceGrotesk-Medium": require("./assets/fonts/SpaceGrotesk-Medium.ttf"),
@@ -1312,7 +1310,7 @@ function PreferencesScreen({
     void run(async () => {
       await api("/api/preferences", {
         method: "PUT",
-        body: JSON.stringify(preferencesSchema.parse(next)),
+          body: JSON.stringify(preferenceInput({...next})),
       });
       reload();
     });

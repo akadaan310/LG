@@ -2,6 +2,7 @@ const development = process.env.NODE_ENV === 'development';
 const mediaOrigin = (() => { try { const u = new URL(process.env.NEXT_PUBLIC_SUPABASE_URL || ''); return u.protocol === 'https:' || (u.protocol === 'http:' && ['localhost','127.0.0.1','[::1]'].includes(u.hostname)) ? u.origin : ''; } catch { return ''; } })();
 const nextConfig = {
   reactStrictMode: true,
+  allowedDevOrigins: ['127.0.0.1', 'localhost'],
   distDir: development ? '.next-dev' : '.next',
   transpilePackages: ['@adequate/domain', '@adequate/ai'],
   poweredByHeader: false,

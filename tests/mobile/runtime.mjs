@@ -41,7 +41,7 @@ const report = {
   pageErrors: [],
 };
 try {
-  execFileSync(
+  if (process.env.ADEQUATE_MOBILE_SKIP_EXPORT !== "true") execFileSync(
     process.execPath,
     [
       path.join(root, "apps/mobile/node_modules/expo/bin/cli"),
@@ -192,10 +192,7 @@ try {
   report.checks.push(
     "Disconnected save retains account draft across screen remount and reconnect manually submits",
   );
-  await page
-    .getByRole("button", { name: "Delete reflection", exact: true })
-    .first()
-    .click();
+  await page.getByText("Unfinished disconnected mobile reflection", {exact:true}).locator("..").getByRole("button", {name:"Delete reflection",exact:true}).click();
   await page
     .getByRole("button", { name: "Confirm reflection deletion", exact: true })
     .click();
