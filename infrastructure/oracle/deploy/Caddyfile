@@ -1,0 +1,39 @@
+{
+	admin off
+	auto_https off
+}
+
+https://{$INFERENCE_HOST} {
+	bind {$INFERENCE_BIND}
+	tls {$INFERENCE_TLS_CERT} {$INFERENCE_TLS_KEY}
+
+	header {
+		Strict-Transport-Security "max-age=31536000"
+		X-Content-Type-Options "nosniff"
+		-Server
+	}
+
+	# Direct VPN/private-network clients only. Do not trust forwarded client IPs.
+	@outside not remote_ip {$INFERENCE_ALLOWED_CIDRS}
+	handle @outside {
+		respond "Unavailable" 403
+	}
+
+	# Health, metrics and runtime/admin endpoints remain available only on loopback.
+	@tasks path /v1/tasks
+	handle @tasks {
+		request_body {
+			max_size 128KB
+		}
+		reverse_proxy 127.0.0.1:8787 {
+			transport http {
+				dial_timeout 2s
+				response_header_timeout 20s
+			}
+		}
+	}
+	handle {
+		respond "Not found" 404
+	}
+	# Access logging is intentionally disabled: no bodies or bearer headers in logs.
+}

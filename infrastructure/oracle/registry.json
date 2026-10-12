@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "active": "local-mock",
+  "models": [
+    {
+      "id": "local-mock",
+      "version": "mock-v1",
+      "model": "local deterministic mock",
+      "license": { "id": "internal-test-fixture", "url": null, "approved": false },
+      "quantization": null,
+      "runtime": "mock",
+      "runtime_config": { "url": null, "model": null, "context_size": 2048, "max_output_tokens": 128, "keep_alive": -1 },
+      "keep_warm": { "enabled": false, "interval_seconds": 60 },
+      "deployment_status": "local_only"
+    },
+    {
+      "id": "qwen2.5-1.5b-instruct-q4-proposal",
+      "version": "proposal-unpinned",
+      "model": "Qwen/Qwen2.5-1.5B-Instruct",
+      "license": { "id": "Apache-2.0", "url": "https://huggingface.co/Qwen/Qwen2.5-1.5B-Instruct/blob/main/LICENSE", "approved": false },
+      "quantization": "Q4_K_M (proposed; actual GGUF checksum and provenance required)",
+      "runtime": "llama.cpp",
+      "runtime_config": { "url": "http://127.0.0.1:8080", "model": null, "context_size": 2048, "max_output_tokens": 128, "keep_alive": -1 },
+      "keep_warm": { "enabled": true, "interval_seconds": 60 },
+      "deployment_status": "blocked_pending_access_license_artifact_and_benchmark"
+    }
+  ]
+}

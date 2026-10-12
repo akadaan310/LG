@@ -1,0 +1,237 @@
+{
+  "schemaVersion": 1,
+  "recordedAt": "2026-10-12T10:48:27.331Z",
+  "evidence": {
+    "kind": "local_synthetic_mock",
+    "targetModelMeasured": false,
+    "oracleLocationVerifiedByHarness": false,
+    "note": "Synthetic timing checks only. No model or Oracle hardware was measured."
+  },
+  "configuration": {
+    "runtime": "mock",
+    "model": "synthetic-fixture-v1",
+    "modelVersion": null,
+    "runtimeVersion": null,
+    "deployment": "local",
+    "iterations": 20,
+    "warmups": 2,
+    "deadlineMs": 15000,
+    "maxConcurrency": 1,
+    "promptUtf8Bytes": 110,
+    "outputTextStored": false
+  },
+  "observedHost": {
+    "platform": "linux",
+    "architecture": "x64",
+    "observedLogicalCpuCount": 5,
+    "osVisibleTotalMemoryBytes": 18932244480,
+    "osVisibleFreeMemoryBytes": 17472106496,
+    "note": "OS observations of this benchmark host. Does not establish Oracle OCPUs, VM entitlement, container quota, or free-tier availability."
+  },
+  "warmupSamples": [
+    {
+      "ok": true,
+      "latencyMs": 4.886783000000008,
+      "ttftMs": 2.6989810000000034,
+      "generatedTokens": null,
+      "generationMs": null,
+      "loadMs": null
+    },
+    {
+      "ok": true,
+      "latencyMs": 4.379064999999997,
+      "ttftMs": 2.160170999999991,
+      "generatedTokens": null,
+      "generationMs": null,
+      "loadMs": null
+    }
+  ],
+  "samples": [
+    {
+      "ok": true,
+      "latencyMs": 4.500936999999993,
+      "ttftMs": 2.243545999999995,
+      "generatedTokens": null,
+      "generationMs": null,
+      "loadMs": null
+    },
+    {
+      "ok": true,
+      "latencyMs": 4.327523999999997,
+      "ttftMs": 2.1564559999999915,
+      "generatedTokens": null,
+      "generationMs": null,
+      "loadMs": null
+    },
+    {
+      "ok": true,
+      "latencyMs": 4.482022999999998,
+      "ttftMs": 2.2430989999999866,
+      "generatedTokens": null,
+      "generationMs": null,
+      "loadMs": null
+    },
+    {
+      "ok": true,
+      "latencyMs": 4.272936999999999,
+      "ttftMs": 2.136927,
+      "generatedTokens": null,
+      "generationMs": null,
+      "loadMs": null
+    },
+    {
+      "ok": true,
+      "latencyMs": 4.311109000000002,
+      "ttftMs": 2.1699359999999928,
+      "generatedTokens": null,
+      "generationMs": null,
+      "loadMs": null
+    },
+    {
+      "ok": true,
+      "latencyMs": 4.381428999999997,
+      "ttftMs": 2.1521299999999997,
+      "generatedTokens": null,
+      "generationMs": null,
+      "loadMs": null
+    },
+    {
+      "ok": true,
+      "latencyMs": 4.33727300000001,
+      "ttftMs": 2.1725800000000106,
+      "generatedTokens": null,
+      "generationMs": null,
+      "loadMs": null
+    },
+    {
+      "ok": true,
+      "latencyMs": 4.467480999999992,
+      "ttftMs": 2.14120299999999,
+      "generatedTokens": null,
+      "generationMs": null,
+      "loadMs": null
+    },
+    {
+      "ok": true,
+      "latencyMs": 4.273409000000015,
+      "ttftMs": 2.130623000000014,
+      "generatedTokens": null,
+      "generationMs": null,
+      "loadMs": null
+    },
+    {
+      "ok": true,
+      "latencyMs": 4.263760000000019,
+      "ttftMs": 2.1360460000000216,
+      "generatedTokens": null,
+      "generationMs": null,
+      "loadMs": null
+    },
+    {
+      "ok": true,
+      "latencyMs": 4.261601000000013,
+      "ttftMs": 2.131844000000001,
+      "generatedTokens": null,
+      "generationMs": null,
+      "loadMs": null
+    },
+    {
+      "ok": true,
+      "latencyMs": 3.577416999999997,
+      "ttftMs": 2.2672609999999906,
+      "generatedTokens": null,
+      "generationMs": null,
+      "loadMs": null
+    },
+    {
+      "ok": true,
+      "latencyMs": 5.2315539999999885,
+      "ttftMs": 2.186610999999999,
+      "generatedTokens": null,
+      "generationMs": null,
+      "loadMs": null
+    },
+    {
+      "ok": true,
+      "latencyMs": 4.3669129999999825,
+      "ttftMs": 2.1436829999999816,
+      "generatedTokens": null,
+      "generationMs": null,
+      "loadMs": null
+    },
+    {
+      "ok": true,
+      "latencyMs": 3.3335860000000253,
+      "ttftMs": 2.118760000000009,
+      "generatedTokens": null,
+      "generationMs": null,
+      "loadMs": null
+    },
+    {
+      "ok": true,
+      "latencyMs": 4.2313469999999995,
+      "ttftMs": 2.1172780000000273,
+      "generatedTokens": null,
+      "generationMs": null,
+      "loadMs": null
+    },
+    {
+      "ok": true,
+      "latencyMs": 5.279194999999987,
+      "ttftMs": 3.1341609999999775,
+      "generatedTokens": null,
+      "generationMs": null,
+      "loadMs": null
+    },
+    {
+      "ok": true,
+      "latencyMs": 4.248467000000005,
+      "ttftMs": 2.1366470000000106,
+      "generatedTokens": null,
+      "generationMs": null,
+      "loadMs": null
+    },
+    {
+      "ok": true,
+      "latencyMs": 4.205467999999996,
+      "ttftMs": 2.082943,
+      "generatedTokens": null,
+      "generationMs": null,
+      "loadMs": null
+    },
+    {
+      "ok": true,
+      "latencyMs": 4.2345160000000135,
+      "ttftMs": 2.117288000000002,
+      "generatedTokens": null,
+      "generationMs": null,
+      "loadMs": null
+    }
+  ],
+  "summary": {
+    "successful": 20,
+    "failed": 0,
+    "latencyMs": {
+      "count": 20,
+      "min": 3.3335860000000253,
+      "mean": 4.329397300000002,
+      "p50": 4.273409000000015,
+      "p95": 5.2315539999999885,
+      "max": 5.279194999999987
+    },
+    "ttftMs": {
+      "count": 20,
+      "min": 2.082943,
+      "mean": 2.2059511,
+      "p50": 2.14120299999999,
+      "p95": 2.2672609999999906,
+      "max": 3.1341609999999775
+    },
+    "tokensPerSecond": null
+  },
+  "resources": {
+    "runtime": null,
+    "note": "Runtime RSS/CPU not measured: no target PID list supplied."
+  },
+  "recovery": null
+}
