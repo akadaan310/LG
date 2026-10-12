@@ -242,10 +242,12 @@ export function DevStatus() {
   return (
     <StudioShell kind="developer" active="dev.status">
       <Card label="Status ledger (mockup — the live ledger is in the Atelier’s Review page)">
+        <div className="ad-table-wrap">
         <table className="ad-table">
           <thead><tr><th>Level</th><th>Item</th><th>Status</th></tr></thead>
           <tbody>{rows.map((r) => <tr key={r[0]}><td className="ad-mono">{r[0]}</td><td>{r[1]}</td><td><Tag>{r[2]}</Tag></td></tr>)}</tbody>
         </table>
+        </div>
       </Card>
       <div className="ad-row">
         <Btn small kind="secondary">design-decisions.json</Btn>

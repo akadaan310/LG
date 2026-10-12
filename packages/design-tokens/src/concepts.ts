@@ -22,7 +22,7 @@ export const goldenHuman: ConceptSystem = {
       surfaceAlt: '#EEE3CD',
       ink: '#2A211B',
       inkMuted: '#5E4F41',
-      accent: '#B8862F',
+      accent: '#A97A27',
       onAccent: '#1E160F',
       accentText: '#80591A',
       accent2: '#8C3B2A',
@@ -145,7 +145,7 @@ export const resonanceAtlas: ConceptSystem = {
       ink: '#0E1322',
       inkMuted: '#47506A',
       accent: '#C27410',
-      onAccent: '#FFFFFF',
+      onAccent: '#140D02',
       accentText: '#94560A',
       accent2: '#1F7A70',
       line: '#C6CCDA',
@@ -290,7 +290,7 @@ export const livingManifesto: ConceptSystem = {
     pairingRationale:
       'A tall condensed poster face delivers lines the way a performer delivers a stanza; a sturdy grotesk keeps everything else legible and calm.',
   },
-  spacing: [6, 12, 24, 48, 96, 192],
+  spacing: [6, 12, 18, 24, 48, 72, 96, 192],
   grid: {
     maxWidth: 1440,
     columns: { desktop: 12, tablet: 6, mobile: 2 },

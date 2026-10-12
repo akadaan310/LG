@@ -13,7 +13,12 @@
     "start": "npm run start -w @adequate/atelier",
     "typecheck": "npm run typecheck -w @adequate/design-tokens -w @adequate/mock-content -w @adequate/atelier",
     "lint": "npm run lint -w @adequate/atelier",
-    "check": "npm run typecheck && npm run lint && npm run build"
+    "check": "npm run typecheck && npm run lint && npm run build",
+    "smoke": "node apps/atelier/scripts/smoke.mjs",
+    "native:install": "npm install --prefix apps/native-preview --no-workspaces",
+    "native:start": "npm run start --prefix apps/native-preview",
+    "native:typecheck": "npm run typecheck --prefix apps/native-preview",
+    "native:export": "npm run export:atelier --prefix apps/native-preview"
   },
   "engines": {
     "node": ">=20"

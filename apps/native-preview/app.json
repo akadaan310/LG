@@ -1,0 +1,28 @@
+{
+  "expo": {
+    "name": "ADEQUATE Design Preview",
+    "slug": "adequate-design-preview",
+    "version": "0.1.0",
+    "orientation": "default",
+    "userInterfaceStyle": "automatic",
+    "platforms": [
+      "ios",
+      "android",
+      "web"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {},
+    "web": {
+      "bundler": "metro",
+      "output": "single"
+    },
+    "plugins": [
+      "expo-status-bar"
+    ],
+    "experiments": {
+      "baseUrl": "/native-app"
+    }
+  }
+}

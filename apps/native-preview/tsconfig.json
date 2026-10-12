@@ -1,0 +1,12 @@
+{
+  "extends": "expo/tsconfig.base",
+  "compilerOptions": {
+    "strict": true,
+    "baseUrl": ".",
+    "paths": {
+      "@adequate/design-tokens": ["../../packages/design-tokens/src/index.ts"],
+      "@adequate/mock-content": ["../../packages/mock-content/src/index.ts"]
+    }
+  },
+  "include": ["src", "index.js", "../../packages/design-tokens/src", "../../packages/mock-content/src"]
+}

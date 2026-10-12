@@ -52,7 +52,7 @@ h1, h2, h3, p { margin: 0; }
 .at-nav a { text-decoration: none; padding: 8px 12px; border-radius: 999px; font-size: 14px; color: var(--at-muted); white-space: nowrap; min-height: 40px; display: inline-flex; align-items: center; }
 .at-nav a[aria-current='page'], .at-nav a:hover { background: var(--at-panel); color: var(--at-ink); }
 .at-tools { margin-left: auto; display: flex; align-items: center; gap: 8px; }
-.at-seg { display: inline-flex; background: var(--at-panel-2); border-radius: 999px; padding: 3px; }
+.at-seg { display: inline-flex; flex-wrap: wrap; max-width: 100%; background: var(--at-panel-2); border-radius: 20px; padding: 3px; }
 .at-seg button { border: none; background: none; padding: 6px 12px; min-height: 36px; border-radius: 999px; cursor: pointer; color: var(--at-muted); font-size: 13px; font-weight: 600; white-space: nowrap; }
 .at-seg button[aria-pressed='true'] { background: var(--at-panel); color: var(--at-ink); box-shadow: var(--at-shadow); }
 .at-iconbtn { border: 1px solid var(--at-line); background: var(--at-panel); color: var(--at-ink); border-radius: 999px; min-height: 40px; min-width: 40px; padding: 0 12px; cursor: pointer; font-size: 13px; font-weight: 600; display: inline-flex; align-items: center; gap: 6px; white-space: nowrap; }

@@ -1,0 +1,30 @@
+{
+  "name": "@adequate/native-preview",
+  "version": "0.1.0",
+  "private": true,
+  "main": "index.js",
+  "description": "Expo React Native design mock screens for ADEQUATE. Design-only: no backend, no auth, no network.",
+  "scripts": {
+    "start": "expo start",
+    "ios": "expo start --ios",
+    "android": "expo start --android",
+    "web": "expo start --web",
+    "export:web": "expo export --platform web --output-dir dist",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "export:atelier": "expo export --platform web --output-dir ../atelier/public/native-app"
+  },
+  "dependencies": {
+    "@expo/metro-runtime": "~57.0.16",
+    "expo": "^57.0.27",
+    "expo-status-bar": "~57.0.1",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
+    "react-native": "0.86.3",
+    "react-native-safe-area-context": "~5.7.0",
+    "react-native-web": "^0.21.2"
+  },
+  "devDependencies": {
+    "@types/react": "^19.3.0",
+    "typescript": "^5.9.3"
+  }
+}

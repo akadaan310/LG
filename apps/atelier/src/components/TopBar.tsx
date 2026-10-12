@@ -13,6 +13,7 @@ const links: [string, string][] = [
   ['/concept/resonance-atlas/', 'B · Atlas'],
   ['/concept/living-manifesto/', 'C · Manifesto'],
   ['/compare/', 'Compare'],
+  ['/native/', 'Native app'],
   ['/present/', 'Present'],
   ['/voice/', 'Founder Voice'],
   ['/review/', 'Review & export'],
