@@ -1,0 +1,21 @@
+{
+  "name": "adequate-design-atelier",
+  "private": true,
+  "version": "0.1.0",
+  "description": "ADEQUATE Design Atelier — design-only review prototype (no backend, no production logic).",
+  "workspaces": [
+    "packages/*",
+    "apps/atelier"
+  ],
+  "scripts": {
+    "dev": "npm run dev -w @adequate/atelier",
+    "build": "npm run build -w @adequate/atelier",
+    "start": "npm run start -w @adequate/atelier",
+    "typecheck": "npm run typecheck -w @adequate/design-tokens -w @adequate/mock-content -w @adequate/atelier",
+    "lint": "npm run lint -w @adequate/atelier",
+    "check": "npm run typecheck && npm run lint && npm run build"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
